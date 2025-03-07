@@ -3,7 +3,10 @@ import Header from "./Components/Header/Header";
 import CoreConcepts from "./Components/CoreConcepts";
 import TabButton from "./Components/TabButton";
 
-
+function handleSelect (Select) {
+  //Handle Dynamic Content: Components, JSX, Props, State
+  console.log(Select);
+}
 
 function App() {
   return (
@@ -26,11 +29,12 @@ function App() {
        <section id="examples">
         <h2>Examples</h2>
         <menu>
-        <TabButton>Components</TabButton>
-        <TabButton>JSX</TabButton>
-        <TabButton>Props</TabButton>
-        <TabButton>State</TabButton>
+        <TabButton onSelect={() => handleSelect('Components') }>Components</TabButton>
+        <TabButton onSelect={() => handleSelect('JSX')}>JSX</TabButton>
+        <TabButton onSelect={() => handleSelect('Props')}>Props</TabButton>
+        <TabButton onSelect={() => handleSelect('State')}>State</TabButton>
         </menu>
+        Dynamic Content
        </section>
         <h2>Time to get started!</h2>
       </main>
